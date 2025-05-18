@@ -1,5 +1,7 @@
 import '../styles/Login.css';
 import React, { useEffect, useState } from 'react';
+import showIcon from '../assets/icons/show-password.png';
+import hideIcon from '../assets/icons/hide-password.png';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -47,10 +49,10 @@ const Login = () => {
                             style={{ outline: "none" }}
                         >
                             <img
-                                src={showPassword ? 'src/assets/icons/hide-password.png' : 'src/assets/icons/show-password.png'}
+                                src={showPassword ? hideIcon : showIcon}
                                 alt={showPassword ? "Hide password" : "Show password"}
                                 className="toggle-icon"
-                            />
+                                />
                         </span>
                     </div>
                     <button type="submit" className="login-button">Log In</button>
