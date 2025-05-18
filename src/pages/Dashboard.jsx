@@ -45,9 +45,9 @@ const Dashboard = () => {
           <div className="bg-white/10 p-6 rounded-xl space-y-4">
             <h3 className="text-lg font-semibold text-white">Recent Activity</h3>
             <ActivityItem message="Heart Nepacina submitted a report" time="10 min ago" />
-            <ActivityItem message="Brylle Villafuerte checked out at 5:00 PM" time="1 hours ago" />
-            <ActivityItem message="Jeremie Canido checked in at 9:43 AM" time="8 hour ago" />
-            <ActivityItem message="JC Diaz checked in at 9:42 AM" time="8 hour ago" />
+            <ActivityItem message="Brylle Villafuerte checked out at 12:00 PM" time="1 hour ago" />
+            <ActivityItem message="Jeremie Canido checked in at 9:43 AM" time="3 hours ago" />
+            <ActivityItem message="JC Diaz checked in at 9:42 AM" time="3 hours ago" />
             <ActivityItem message="Aaron Lescano updated his progress" time="Yesterday" />
           </div>
         </div>
