@@ -1,5 +1,5 @@
 {
-  "name": "web-system",
+  "name": "web-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,6 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",
-    "react-qr-reader": "^3.0.0-beta-1",
     "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
