@@ -25,9 +25,9 @@ const Dashboard = () => {
 
             {/* Summary Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <SummaryCard title="Total Members" value="120" icon="🧍" />
-            <SummaryCard title="Attendance Today" value="38" icon="📅" />
-            <SummaryCard title="Unread Reports" value="5" icon="🆘" />
+            <SummaryCard title="Total Members" value="120" icon="" />
+            <SummaryCard title="Attendance Today" value="38" icon="" />
+            <SummaryCard title="Unread Reports" value="5" icon="" />
             </div>
 
             {/* Coach Insights */}

@@ -1,8 +1,8 @@
 import '../styles/Login.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import showIcon from '../assets/icons/show-password.png';
-import hideIcon from '../assets/icons/hide-password.png';
+import showIcon from '../assets/icons/show-password.svg';
+import hideIcon from '../assets/icons/hide-password.svg';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);

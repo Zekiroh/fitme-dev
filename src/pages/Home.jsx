@@ -20,14 +20,14 @@ const Home = () => {
           and monitor member progress synced from the mobile app.
         </p>
 
-        <p className="text-white/80 text-sm mb-2">Monday, May 19 · Good day, Coach!</p>
+        <p className="text-white/80 text-sm mb-2">Tuesday, May 27 · Good day, Coach!</p>
 
         <a
           href="/dashboard"
           className="inline-block bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold px-8 py-3 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-xl ring-2 ring-orange-300 hover:ring-red-400 focus:outline-none focus:ring-4 focus:ring-red-500"
           style={{ marginTop: "70px" }}
         >
-          🚀 Open Dashboard
+          Open Dashboard
         </a>
       </section>
 
@@ -35,7 +35,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 px-6 text-white text-left">
         {/* Attendance Log */}
         <Link
-          to="/"
+          to="/attendance"
           title="Go to Attendance Log"
           className="
             relative
@@ -63,7 +63,7 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition duration-300 pointer-events-none rounded-xl" />
           <h4 className="relative text-lg font-extrabold mb-2 text-white drop-shadow-lg">
-            📝 Attendance Log
+            Attendance Log
           </h4>
           <p className="relative text-white text-sm font-medium drop-shadow">
             Record and view check-ins with date-stamped tracking.
@@ -100,7 +100,7 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition duration-300 pointer-events-none rounded-xl" />
           <h4 className="relative text-lg font-extrabold mb-2 text-white drop-shadow-lg">
-            🆘 Assistance Reports
+            Assistance Reports
           </h4>
           <p className="relative text-white text-sm font-medium drop-shadow">
             View and respond to customer concerns from the mobile app.
@@ -137,7 +137,7 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition duration-300 pointer-events-none rounded-xl" />
           <h4 className="relative text-lg font-extrabold mb-2 text-white drop-shadow-lg">
-            📊 Monitor Progress
+            Monitor Progress
           </h4>
           <p className="relative text-white text-sm font-medium drop-shadow">
             Track member performance and metrics in real-time.
