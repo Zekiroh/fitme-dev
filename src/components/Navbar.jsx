@@ -42,28 +42,28 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-black bg-opacity-70 text-white px-6 py-4 relative z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left: Hamburger + Logo Row */}
-        <div className="flex items-center gap-4">
-          {/* Mobile Only - Hamburger */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? (
-                <X className="w-6 h-6 text-orange-400" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-
-          {/* Logo */}
-          <Link to="/home" className="text-2xl font-bold text-orange-500">
-            Fit<span className="text-white">Me</span>
-          </Link>
+      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
+        {/* Left - Hamburger */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <X className="w-6 h-6 text-orange-400" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
 
-        {/* Center - Nav Links */}
-        <ul className="hidden md:flex gap-10 text-lg font-semibold">
+        {/* Center - Logo */}
+        <Link
+          to="/home"
+          className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-orange-500 md:static md:transform-none"
+        >
+          Fit<span className="text-white">Me</span>
+        </Link>
+
+        {/* Center - Nav Links (Desktop Only) */}
+        <ul className="hidden md:flex gap-10 text-lg font-semibold mx-auto">
           <li>
             <Link to="/attendance" className={isActive('/attendance')}>
               Attendance Log
@@ -81,7 +81,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Right - Profile Icon + Dropdown */}
+        {/* Right - Profile Icon with Dropdown */}
         <div
           ref={profileRef}
           className="relative flex items-center cursor-pointer"
