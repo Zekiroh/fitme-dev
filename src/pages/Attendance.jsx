@@ -6,7 +6,6 @@ import DateFilter from '../components/DateFilter';
 import AttendanceTable from '../components/AttendanceTable';
 import EditIcon from '../assets/icons/edit.svg';
 import SaveIcon from '../assets/icons/save.svg';
-
 import SubscriptionMonitor from '../components/SubscriptionMonitor';
 
 const Attendance = () => {
@@ -15,11 +14,11 @@ const Attendance = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [clock, setClock] = useState(new Date());
   const [logs, setLogs] = useState([
-    { id: 1, name: 'Jeremie Canido', timeIn: '08:10 AM', timeOut: '09:32 AM', date: '5/27/2025' },
-    { id: 2, name: 'JC Diaz', timeIn: '08:10 AM', timeOut: '09:32 AM', date: '5/27/2025' },
-    { id: 3, name: 'Aaron Lescano', timeIn: '08:11 AM', timeOut: '09:32 AM', date: '5/27/2025' },
-    { id: 4, name: 'Heart Nepacina', timeIn: '08:11 AM', timeOut: '09:32 AM', date: '5/27/2025' },
-    { id: 5, name: 'Brylle Villafuerte', timeIn: '08:11 AM', timeOut: '09:32 AM', date: '5/27/2025' },
+    { id: 1, name: 'Jeremie Canido', timeIn: '08:10 AM', timeOut: '9:32 AM', date: '5/27/2025' },
+    { id: 2, name: 'JC Diaz', timeIn: '08:10 AM', timeOut: '9:32 AM', date: '5/27/2025' },
+    { id: 3, name: 'Aaron Lescano', timeIn: '08:11 AM', timeOut: '9:32 AM', date: '5/27/2025' },
+    { id: 4, name: 'Heart Nepacina', timeIn: '08:11 AM', timeOut: '9:32 AM', date: '5/27/2025' },
+    { id: 5, name: 'Brylle Villafuerte', timeIn: '08:11 AM', timeOut: '9:32 AM', date: '5/27/2025' },
   ]);
 
   const [newLog, setNewLog] = useState({ name: '' });
@@ -123,7 +122,7 @@ const Attendance = () => {
     const nameMatch =
       searchQuery.trim() === '' || entry.name.toLowerCase().includes(searchQuery.toLowerCase());
 
-    if (!selectedDate) return nameMatch; // ✅ no date filter = show all logs
+    if (!selectedDate) return nameMatch; // no date filter = show all logs
 
     const entryDate = new Date(entry.date);
     const filterDate = new Date(selectedDate);
@@ -132,7 +131,7 @@ const Attendance = () => {
     const isTodaySelected = filterDate.toDateString() === today.toDateString();
 
     const dateMatch = isTodaySelected
-      ? entryDate <= today // ✅ today = show today & past
+      ? entryDate <= today // today = show today & past
       : entry.date === selectedDate;
 
     return nameMatch && dateMatch;

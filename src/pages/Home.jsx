@@ -20,7 +20,7 @@ const Home = () => {
           and monitor member progress synced from the mobile app.
         </p>
 
-        <p className="text-white/80 text-sm mb-2">Tuesday, May 27 · Good day, Coach!</p>
+        <p className="text-white/80 text-sm mb-2">Monday, June 16 · Good day, Coach!</p>
 
         <a
           href="/dashboard"
