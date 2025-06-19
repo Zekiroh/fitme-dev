@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ProfileIcon from '../assets/icons/profile-user.svg';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -39,6 +41,11 @@ const Navbar = () => {
 
   const isActive = (path) =>
     location.pathname === path ? 'text-orange-400' : 'hover:text-orange-400';
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  };
 
   return (
     <nav className="w-full bg-black bg-opacity-70 text-white px-6 py-4 relative z-50">
@@ -111,9 +118,12 @@ const Navbar = () => {
             <Link to="/account" className="block px-4 py-2 hover:bg-[#374151]">
               Account
             </Link>
-            <Link to="/logout" className="block px-4 py-2 hover:bg-[#374151]">
+            <div
+              onClick={handleLogout}
+              className="block px-4 py-2 hover:bg-[#374151] cursor-pointer"
+            >
               Sign Out
-            </Link>
+            </div>
           </div>
         </div>
       </div>
